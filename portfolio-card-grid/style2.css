@@ -1,0 +1,170 @@
+:root{
+    --blue: #0047FF;
+    --white: #f2f2f2;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+main{
+    margin-left: 80px;
+    margin-right: 80px;
+    overflow-x: hidden;
+}
+
+.bg-image{
+    width: clamp(600px, 90vw, 1000px);
+    opacity: 0.16;
+}
+
+.bg-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg-container h1{
+    position: absolute;
+    text-align: center;
+    top: 300px;
+    max-width: 800px;
+}
+
+.bg-container .pre-title{
+    position: absolute;
+    align-self: center;
+    text-align: center;
+    top: 210px;
+    max-width: 800px;
+}
+
+.post-title{
+    position: absolute;
+    top: 480px;
+    font-size: 1.2em;
+    opacity: 0.5;
+}
+
+.gradient-transition{
+    width: 100vw;
+    height: 140px;
+    background: linear-gradient(rgba(242, 242, 242, 0%), rgb(242, 242, 242));
+    position: relative;
+    bottom: 140px;
+    right: 80px;
+}
+
+.view-work{
+    position: absolute;
+    top: 570px;
+    z-index: 1;
+}
+
+.skill-card-container{
+    position: relative;
+    bottom: 300px;
+    gap: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.skill-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    max-width: 320px;
+    background-color: white;
+    padding: 10px 10px 20px 10px;
+}
+
+.skill-card-icon{
+    height: 50px;
+    background-color: var(--blue);
+    padding: 10px;
+    position: relative;
+    bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.skill-card-title{
+    font-weight: 600;
+    position: relative;
+    bottom: 10px;
+}
+
+.skill-card-text{
+    position: relative;
+    bottom: 15px;
+}
+
+footer{
+    position: relative;
+    bottom: 100px;
+    height: 100px;
+    padding-top: 0px;
+}
+
+@media only screen and (max-width: 968px){
+    main{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .bg-container h1{
+        font-size: 3em;
+        top: 200px;
+        max-width: 500px;
+    }
+    .bg-container .pre-title{
+        top: 120px;
+    }
+    .post-title{
+        top: 360px;
+    }
+    .view-work{
+        top: 450px;
+    }
+    .skill-card-container{
+        bottom: 160px;
+        gap: 5vw;
+    }
+}
+
+@media only screen and (max-width: 630px){
+    .bg-container h1{
+        max-width: 295px;
+    }
+    
+    .post-title{
+        top: 510px;
+        font-size: 1em;
+    }
+
+    #line-break::after{
+        content: "\a";
+        white-space: pre;
+    }
+
+    main{
+        margin: 0px;
+    }
+
+    .view-work{
+        top: 570px;
+    }
+
+    .skill-card-container{
+        bottom: 90px;
+        flex-direction: column;
+        align-items: center;
+        gap: 90px;
+    }
+
+    footer{
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+}

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Montserrat';
+    margin: 0px;
+    color: #252525;
+}
+
+/* -----------------MENU------------------ */
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    padding: 30px 0px 20px 0px;
+}
+
+.logo{
+    text-transform: uppercase;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+.menu li{
+    margin-right: 5vw;
+    text-transform: uppercase;
+}
+
+
+/* -----------------MAIN------------------ */
+main{
+    margin: auto 0px auto 80px;
+}
+
+.pre-title{
+    margin-top: 50px;
+    font-size: 1.2em;
+    opacity: 50%;
+}
+
+h1{
+    margin: 0px 0px 70px 0px;
+    font-size: 4em;
+    font-weight: 400;
+    line-height: 80px;
+}
+
+.main-title{
+    max-width: 700px;
+}
+
+
+/* -----------------MAIN:PROJECT-CARDS------------------ */
+.card-container{
+    display: flex;
+    gap: 2vw;
+    overflow-x: auto;
+}
+
+.card{
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 70% 10% 5% 5% 10%;
+    grid-template-rows: 9% 91%;
+    width: clamp(177.5px, 25vw, 354px);
+    height: 32vw;
+    max-height: 450px;
+    min-height: 225px;
+}
+
+.card-number{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 0px;
+    margin-right: clamp(1px, 0.4vw, 5px);
+    font-size: clamp(1em, 2.3vw, 2em);
+    direction: rtl;
+    line-height: clamp(0.8em, 1.8vw, 1em);
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.card-image{
+    grid-row-start: 2;
+    grid-row-end:3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    object-fit: cover;
+    width: 100%;
+    filter: grayscale(1);
+    transition: filter 0.2s ease;
+}
+
+.expanding-dot{
+    width: clamp(12.5px, 1.8vw, 25px);
+    height: clamp(12.5px, 1.8vw, 25px);
+    background-color: blue;
+    grid-column-start: 3;
+    grid-column-end:5;
+    justify-self: center;
+    margin: 0px;
+    margin-bottom: clamp(1px, 0.2vw, 10px);
+    transition: height 1.3s cubic-bezier(.17,1.65,.43,.77);
+    z-index: 1;
+}
+
+.card-title{
+    writing-mode: vertical-rl;
+    margin: 0px;
+    font-size: clamp(1em, 2.3vw, 2em);
+    justify-self: center;
+    font-weight: 600;
+}
+
+.card:hover .expanding-dot{
+    height: clamp(168px, 25vw, 338px);
+}
+
+.card:hover .card-image{
+    filter: grayscale(0);
+}
+
+
+/* -----------------FOOTER------------------ */
+footer{
+    padding: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 100px;
+    background-color: #f2f2f2;
+    margin-top: 80px;
+}
+
+.footer-icons{
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+    margin: 20px auto;
+    opacity: 30%;
+}
+
+
+/* -----------------MOBILE-SITE------------------ */
+@media only screen and (max-width: 600px){
+main{
+    margin: auto 0px auto 30px;
+}    
+
+.logo{
+    margin-left: 30px;
+}
+
+h1{
+    font-size: 3em;
+    line-height: 60px;
+}
+
+.main-title{
+    max-width: 500px;
+}
+
+.menu li{
+    display: none;
+}
+
+}

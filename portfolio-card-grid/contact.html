@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="react-root">
+        
+    </div>
+    <script>
+        window.JotFormAPIEndpoint = 'https://eu-api.jotform.com';
+        window.JOTFORM_ENV = 'PRODUCTION';
+        window.GOOGLE_SIGNON = '172124630376-qk1qmdfmur2ojaf39e070iqhpt2foaip.apps.googleusercontent.com';
+        window.FACEBOOK_SIGNON_APP_ID = '1140740696088074';
+        window.MICROSOFT_SIGNON_CLIENT_ID = '482577e8-f8d0-4a09-bbbb-15de3d05eebe';
+    </script>
+    
+    <script src="https://cdn.jotfor.ms/s/umd/latest-prod/for-login-flow.js"></script>
+    <script>
+        window.loginFlowHelper.init({
+            resourceID: "223363655718058",
+            productType: "form",
+            resourceTitle: "Contact",
+            welcomeText: "",
+            greetingMessage: "",
+            greetingDescription: "",
+            verificationHash: "",
+            forceLogin: "false",
+            formUser: false,
+            isHIPAA: false,
+            forceUser: false,
+            ignoreFormUser: false,
+            wrapperClassName: "",
+            initialScreen: undefined,
+            showLogoOnSignupOptions: false,
+            logoSource: "",
+            firstShowThankyouModal: false,
+            signupOptions: "",
+            buttonNames: { 
+        google: 'protected-screen-google-signup',
+        facebook: 'protected-screen-facebook-signup',
+        apple: 'protected-screen-apple-signup',
+        emailLogin: 'protected-screen-standart-login-button',
+        emailSignup: 'protected-screen-header-createmyaccount'
+      },
+        });
+    </script>
+</body>
+</html>
